@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+body {
+  font-family: "League Spartan", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  background-color: hsl(180, 52%, 96%);
+}
+
+.jobCard {
+  background-color: white;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  align-items: center;
+  height: 18vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+    /*remove it later*/
+  border: 10px solid hsl(180, 52%, 96%);
+  border-radius: 15px;
+}
+
+.leftSection {
+  margin-left: 70px;
+
+}
+
+.rightSection {
+  display: flex;
+  gap: 10px;
+  margin-right: 70px;
+
+}
+
+.companyDataWithLogo {
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+
+.jobDetails{
+display:flex;
+flex-direction:column;
+margin-left:20px;
+padding-top: 10px;
+}
+
+.companyDetails {
+  display: flex;
+  width: 20vw;
+  gap: 10px;
+  align-items: center;
+  padding-bottom: 10px;
+}
+
+.companyName {
+  color: hsl(180, 29%, 50%);
+  padding-right: 10px;
+
+}
+
+.newTag {
+  background-color: hsl(180, 29%, 50%);
+  padding: 6px;
+  border-radius: 25px;
+  color: white;
+  font-size: 10px;
+}
+
+.featuredTag {
+  background-color: hsl(180, 14%, 20%);
+  padding: 6px;
+  border-radius: 25px;
+  color: white;
+  font-size: 10px;
+}
+
+.jobRole {
+  padding-bottom: 10px;
+ 
+  font-weight: 700;
+}
+
+.jobRole:hover {
+  color: hsl(180, 29%, 50%);
+}
+
+.jobDetails2 {
+  color: hsla(0, 0%, 45%, 0.905);
+  font-weight: 500;
+  padding-bottom: 20px;
+}
+
+.jobTag {
+  color: hsl(180, 29%, 50%);
+  padding: 8px;
+  background-color: hsl(180, 52%, 96%);
+  border-radius: 5px;
+  font-size: 12px;
+}
+.jobTag:hover {
+  background-color: hsl(180, 29%, 50%);
+  color: white;
+} 
