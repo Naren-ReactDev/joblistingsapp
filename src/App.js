@@ -1,12 +1,14 @@
 
 import './App.css';
-import JobCard from './components/jobCard';
+import { JobListings } from './components/jobListings';
 
 function App() {
   return (
     <div className="App">
-     <JobCard></JobCard>
-     <JobCard></JobCard>
+
+<JobListings></JobListings>
+    
+    
     </div>
   );
 }

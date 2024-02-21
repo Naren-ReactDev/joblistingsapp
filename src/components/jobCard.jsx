@@ -1,29 +1,45 @@
-import { Photosnap } from "./companyLogo";
-const JobCard = () => {
+import * as CompanyLogos from "./companyLogo";
+const JobCard = ({ jobRecord }) => {
+
+  const getJobTags = (tags) => {
+    return tags.map((tag,key) => {
+      return <p className="jobTag"> {tag} </p>;
+    });
+  };
+
+  const getLogo = (id) => {
+    console.log("Logo" + id)
+    const LogoComponent = CompanyLogos["Logo" + id];
+    return <LogoComponent/>;
+  };
+
   return (
     <div className="jobCard">
       <div className="leftSection">
         <div className="companyDataWithLogo">
-          <div>
-            <Photosnap />
-          </div>
+          <div>{getLogo(jobRecord.id)}</div>
           <div className="jobDetails">
             <div className="companyDetails">
-              <div className="companyName">Photosnap</div>
-              <div className="newTag">NEW!</div>
-              <div className="featuredTag">FEATURED</div>
+              <div className="companyName">{jobRecord?.company}</div>
+              {jobRecord?.new ? <div className="newTag">NEW!</div> : ""}
+              {jobRecord?.featured ? (
+                <div className="featuredTag">FEATURED</div>
+              ) : (
+                ""
+              )}
             </div>
-            <div className="jobRole">Senior Frontend Developer</div>
-            <div className="jobDetails2"> 1d ago . Full Time . USA only</div>
+            <div className="jobRole">{jobRecord?.position}</div>
+            <div className="jobDetails2">
+              {jobRecord?.postedAt} . {jobRecord?.contract} .
+              {jobRecord?.location}
+            </div>
           </div>
         </div>
       </div>
       <div className="rightSection">
-        <p className="jobTag"> Frontend </p>
-        <p className="jobTag">Senior</p>
-        <p className="jobTag"> HTML </p>
-        <p className="jobTag"> CSS </p>
-        <p className="jobTag"> Javascript </p>
+        {jobRecord?.role ? <p className="jobTag">{jobRecord.role}</p> : ""}
+        {jobRecord?.level ? <p className="jobTag">{jobRecord.level}</p> : ""}
+        {getJobTags(jobRecord.languages)}
       </div>
     </div>
   );
