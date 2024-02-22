@@ -4,9 +4,74 @@ body {
   font-family: "League Spartan", sans-serif;
   font-size: 15px;
   font-weight: 700;
-  background-color: hsl(180, 52%, 96%);
+  margin:0;
 }
 
+.header{
+background-image: url("./images/bg-header-desktop.svg");
+background-color: hsl(180, 8%, 52%);
+height: 100px;
+position: relative;
+
+}
+.filterBar{
+  display:flex;
+  justify-content:space-between;
+  gap: 10px;;  
+  margin-left: 160px;
+  padding-left: 50px;
+  padding-right: 50px;;    
+  width: 72.5vw;
+  height: 50px;
+  background-color: white;
+  position: absolute;
+  top: 78px;
+  border-radius: 8px;;
+}
+.filterBarLeft{
+  display:flex;
+  gap: 10px; 
+}
+.clearFilters{
+  color: hsl(180, 29%, 50%);
+}
+ 
+.clearFilters:hover{
+  text-decoration: underline; 
+  cursor: pointer;
+}
+
+.filterTag {
+  color: hsl(180, 29%, 50%);
+  background-color: hsl(180, 52%, 96%);
+  border-radius: 5px;
+  font-size: 12px; 
+  padding:5px;
+  padding-top: 7px;
+}
+.removeFiltorButton{
+  background-color: hsl(180, 29%, 50%);
+  color:white;
+  display: inline;
+  height: 20px;
+  width: 20px;
+  font-size: 10px;  
+  padding:0;
+  border:0;
+  margin-top: 15px;
+  margin-left:-10px;  
+}
+
+.removeFiltorButton:hover{
+  background-color: hsl(180, 29%, 50%);
+  background-color: hsl(180, 14%, 20%);
+  cursor: pointer;
+}
+
+.mainBody{
+  background-color: hsl(180, 52%, 96%);
+  padding-top: 50px
+}
 .jobCard {
   background-color: white;
   margin-left: 10vw;
@@ -102,4 +167,5 @@ padding-top: 10px;
 .jobTag:hover {
   background-color: hsl(180, 29%, 50%);
   color: white;
+  cursor: pointer;
 } 
