@@ -17,16 +17,16 @@ position: relative;
 .filterBar{
   display:flex;
   justify-content:space-between;
-  gap: 10px;;  
-  margin-left: 160px;
+  gap: 10px;  
+  right: 10.5vw;
   padding-left: 50px;
   padding-right: 50px;;    
-  width: 72.5vw;
+  width:72%;
   height: 50px;
   background-color: white;
   position: absolute;
   top: 78px;
-  border-radius: 8px;;
+  border-radius: 8px;
 }
 .filterBarLeft{
   display:flex;
@@ -76,7 +76,6 @@ position: relative;
   background-color: white;
   margin-left: 10vw;
   margin-right: 10vw;
-  align-items: center;
   height: 18vh;
   display: flex;
   align-items: center;
@@ -88,7 +87,6 @@ position: relative;
 
 .leftSection {
   margin-left: 70px;
-
 }
 
 .rightSection {
@@ -149,6 +147,7 @@ padding-top: 10px;
 
 .jobRole:hover {
   color: hsl(180, 29%, 50%);
+  cursor: pointer;
 }
 
 .jobDetails2 {
@@ -169,3 +168,42 @@ padding-top: 10px;
   color: white;
   cursor: pointer;
 } 
+
+
+@media  (max-width: 376px){
+  .jobCard{
+    width:375px;
+    margin:0;
+    padding-top: 35px;
+    height: 28vh;
+    flex-direction: column; 
+    align-items: flex-start; 
+    justify-content:start;
+    border: 30px solid hsl(180, 52%, 96%);
+    
+  }
+  .companyDataWithLogo{
+    position:relative;
+  }
+  .leftSection{
+    margin:0;
+    padding: 0;
+  }
+  .rightSection{
+    margin: 0;
+    padding-left: 10px;
+  }
+  .seperator{
+    height:1px;
+    width:320px;    
+    background-color: rgb(204, 202, 202); 
+  }
+  .logo{
+    position: absolute;
+    top: -85px;
+    left: 10px;
+  }
+  .companyDetails{
+    width:100vw;
+  }
+}

@@ -17,7 +17,7 @@ const JobCard = ({ jobRecord,updateFilterTags }) => {
     <div className="jobCard">
       <div className="leftSection">
         <div className="companyDataWithLogo">
-          <div>{getLogo(jobRecord.id)}</div>
+          <div className="logo">{getLogo(jobRecord.id)}</div>
           <div className="jobDetails">
             <div className="companyDetails">
               <div className="companyName">{jobRecord?.company}</div>
@@ -30,14 +30,34 @@ const JobCard = ({ jobRecord,updateFilterTags }) => {
             </div>
             <div className="jobRole">{jobRecord?.position}</div>
             <div className="jobDetails2">
-              {jobRecord?.postedAt}  .  {jobRecord?.contract}  .  {jobRecord?.location}
+              {jobRecord?.postedAt} . {jobRecord?.contract} .{" "}
+              {jobRecord?.location}
             </div>
+            <div className="seperator"></div>
           </div>
         </div>
       </div>
       <div className="rightSection">
-        {jobRecord?.role ? <p className="jobTag" onClick={()=>updateFilterTags(jobRecord.role)}>{jobRecord.role}</p> : ""}
-        {jobRecord?.level ? <p className="jobTag" onClick={()=>updateFilterTags(jobRecord.level)}>{jobRecord.level}</p> : ""}
+        {jobRecord?.role ? (
+          <p
+            className="jobTag"
+            onClick={() => updateFilterTags(jobRecord.role)}
+          >
+            {jobRecord.role}
+          </p>
+        ) : (
+          ""
+        )}
+        {jobRecord?.level ? (
+          <p
+            className="jobTag"
+            onClick={() => updateFilterTags(jobRecord.level)}
+          >
+            {jobRecord.level}
+          </p>
+        ) : (
+          ""
+        )}
         {getJobTags(jobRecord.languages)}
       </div>
     </div>
