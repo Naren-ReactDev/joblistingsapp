@@ -1,4 +1,4 @@
-You can view the application in yuor broser by clicking on [https://naren-reactdev.github.io/joblistingsapp/](https://naren-reactdev.github.io/joblistingsapp/)
+You can view the application in your browser by clicking on [https://naren-reactdev.github.io/joblistingsapp/](https://naren-reactdev.github.io/joblistingsapp/)
 
 # Getting Started with Create React App
 
