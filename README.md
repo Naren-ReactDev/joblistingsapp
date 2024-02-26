@@ -1,3 +1,5 @@
+you can view the application in yuor broser by clicking on[https://naren-reactdev.github.io/joblistingsapp/](https://naren-reactdev.github.io/joblistingsapp/)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
