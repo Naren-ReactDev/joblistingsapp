@@ -9,7 +9,7 @@ body {
 
 .header{
 background-image: url("./images/bg-header-desktop.svg");
-background-color: hsl(180, 8%, 52%);
+background-color:hsl(180 29% 50%);
 height: 100px;
 position: relative;
 
