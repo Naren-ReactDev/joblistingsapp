@@ -8,7 +8,6 @@ const JobCard = ({ jobRecord,updateFilterTags }) => {
   };
 
   const getLogo = (id) => {
-    console.log("Logo" + id)
     const LogoComponent = CompanyLogos["Logo" + id];
     return <LogoComponent/>;
   };
@@ -58,7 +57,7 @@ const JobCard = ({ jobRecord,updateFilterTags }) => {
         ) : (
           ""
         )}
-        {getJobTags(jobRecord.languages)}
+        {getJobTags([...jobRecord.languages,...jobRecord.tools])}
       </div>
     </div>
   );

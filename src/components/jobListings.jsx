@@ -23,13 +23,11 @@ export const JobListings = () => {
   const filterFlag = (jobRecord) => {
     const singleJobTags = [
       ...jobRecord.languages,
+      ...jobRecord.tools,
       jobRecord.role,
       jobRecord.level,
     ];
     return filtertags.every((item) => singleJobTags.includes(item));
-    // return filtertags?.find((item) => {
-    //   return singleJobTags.includes(item);
-    // });
   };
 
   const displayFilterTags = useMemo(() => {
